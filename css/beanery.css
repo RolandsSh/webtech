@@ -1,0 +1,203 @@
+.header 
+{
+    background-color: rgb(255,127,39);
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar
+{
+    margin: auto;
+    display: inline-block;
+    background-color: rgb(255, 127, 39);
+}
+
+nav a
+{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px 0px;
+    transition: 0.4s;
+    text-align: center;
+    margin: auto;
+}
+
+nav a:hover 
+{
+    color: #000;
+    background-color: rgb(255, 180, 60);
+}
+
+nav ul
+{
+    width: 65%;
+}
+
+nav li
+{
+    margin: auto;
+}
+
+li.nav-left
+{
+    width: 10%;
+}
+
+li.nav-middle
+{
+    width: 40%;
+}
+
+li.nav-right
+{
+    width: 5%;
+}
+
+li.nav-search
+{
+    width: 20%;
+}
+
+.logo
+{
+    height: 35px;
+    object-fit: contain;
+}
+
+.article
+{
+    margin: auto;
+    width: 65%;
+    text-align: justify;
+}
+
+footer
+{
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(220,220,220)
+}
+
+.bottom
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+}
+
+.bottom-left
+{
+    flex: 1;
+    text-align: left;
+}
+
+.bottom-middle
+{
+    flex: 1;
+    text-align: center;
+}
+
+.bottom-right
+{
+    flex: 1;
+    text-align: right;
+}
+
+.sitemap
+{
+    list-style-type: none;
+}
+
+.bottom-socials
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.bottom-socials img
+{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.copyright
+{
+    flex: 1;
+    text-align: center;
+}
+
+.copyright p
+{
+    align-items: center;
+    padding: 0 0;
+}
+
+@media screen and (max-width: 992px)
+{
+    nav a
+    {
+        color: #000;
+        font-size: 20px;
+        transition: 0.4s;
+        text-align: right;
+        margin: auto;
+        padding-right: 10%;
+    }
+
+    nav a:hover 
+    {
+        color: #000;
+        background-color: rgb(255, 180, 60);
+    }
+
+    nav ul
+    {
+        width: 100%;
+    }
+
+    nav li
+    {
+        margin: auto;
+    }
+
+    li.nav-left, li.nav-middle, li.nav-right
+    {
+        width: 100%;
+    }
+
+    li.nav-search
+    {
+        width: 80%;
+    }
+
+    .bottom
+    {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .bottom-left, .bottom-middle, .bottom-right
+    {
+        text-align: left;
+    }
+
+    .copyright p
+    {
+        align-items: center;
+        padding: 0 0;
+    }
+
+    .article
+    {
+        margin: auto;
+        width: 80%;
+        text-align: justify;
+    }
+}
