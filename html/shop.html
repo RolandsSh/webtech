@@ -1,55 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
     <head>
-        <link rel="stylesheet" type="text/css" href="beanery.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../css/beanery.css" />
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
         <title>About Beanery</title>
     </head>
 
     <body>
-        <nav>
-            <ul class = "topLeft">
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-            <ul class = "topRight">
-                <li><a href = "search.html"><img src = "/img/search.png" alt = "Search"></a></li>
-                <li><a href = "cart.html"><img src = "/img/cart.png" alt = "Shopping cart"></a></li>
-                <li><a href = "profile.html"><img src = "/img/profile.png" alt = "Profile"></a></li>
-            </ul>
-        </nav>
-
-        <div class = "article">
-            <h1>Title</h1>
-            <p> Lorem ipsum dolor sit amet</p>
+        <div class="header">
+            <h2>BEANERY</h2>
+            <p>Specialty coffee roastery est. 2022</p>
         </div>
 
-        <footer>
-            <div class = "bottomLeft">
-                <p>Sitemap</p>
-                <ul class = "bottomLeft">
-                    <li><a href = "about.html">About</a></li>
-                    <li><a href = "shop.html">Shop</a></li>
-                    <li><a href = "contacts.html">Contacts</a></li>
-                    <li><a href = "policy.html">Privacy policy</a></li>
-                </ul>
-            </div>
-            
-            <div class = "bottomCenter">
-                <img src = "/img/logo.png">
-                <ul class = "bottomCenter">
-                    <li><a href = "https://facebook.com"><img src = "/img/facebook.png"></a></li>
-                    <li><a href = "https://instagram.com"><img src = "/img/instagram.png"></a></li>
-                    <li><a href = "https://youtube.com"><img src = "/img/youtube.png"></a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class = "container-fluid">
+                <button class="navbar-toggler" type = "button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                    <div class = "d-flex justify-content-center">
+                        <ul class = "navbar-nav">
+                            <li class = "nav-left"><a href = "about.html">About</a></li>
+                            <li class = "nav-left"><a href = "shop.html">Shop</a></li>
+                            <li class = "nav-left"><a href = "contacts.html">Contacts</a></li>
+                            <li class = "nav-middle"><a href = "index.html"><img class = "logo" src = "../img/logo_100.png"  alt = "Home"></a></li>
+                            <li class = "nav-right"><a href = "cart.html"><img src = "../img/cart.png" height = 35px alt = "Shopping cart"></a></li>
+                            <li class = "nav-right"><a href = "profile.html"><img src = "../img/profile.png" height = 35px alt = "Profile"></a></li>
+                            <li class = "nav-search">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>      
+        </nav>
 
-            <div class = "bottomRight">
-                <p>Address: Test street 13-37, Riga, Latvia</p>
-                <p>Phone: +371 90901001</p>
-                <p>E-mail: info@beanery.lv</p>
-            </div>
+        <div class="title"><h1>Shop</h1></div>
 
-            <p>© Beanery, 2022</p>
+        <div class = "article">
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">              
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/arabica.jpg." class="card-img-top" alt="arabica">
+                        <div class="card-body">
+                            <h5 class="card-title">100% arabica coffee</h5>
+                            <p class="card-text">Delicious 100% arabica coffee with fruity notes.</p>
+                            <p>Price: <span class="price">35.99</span> €/kg</p>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#product1Modal">
+                                More info
+                            </button>
+                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('arabica', 35.99, 1)">Add to cart</button>
+
+                            <div class="modal fade" id="product1Modal" tabindex="-1" aria-labelledby="product1ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="product1ModalLabel">100% arabica coffee</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <img src="../img/arabica.jpg." class="card-img-top" alt="arabica">
+                                        <div class="modal-body">
+                                            <p class="modal-text">Delicious 100% arabica coffee with fruity notes.</p>
+                                            <p>It is sourced from a small village in Brazil close to the Amazon river. Features light roast with fruity notes and hint of chocolate in the aftertaste.</p>
+                                            <p>Price: <span class="price">35.99</span> €/kg</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('arabica', 35.99, 1)">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/brazilian.jpg" class="card-img-top" alt="brazilian">
+                        <div class="card-body">
+                            <h5 class="card-title">Brazilian coffee</h5>
+                            <p class="card-text">Strong Brazilian coffee that will help you wake up and survive the day.</p>
+                            <p>Price: <span class = "price">25.99</span> €/kg</p>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#product2Modal">
+                                More info
+                            </button>
+                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('brazilian', 25.99, 1)">Add to cart</button>
+
+                            <div class="modal fade" id="product2Modal" tabindex="-1" aria-labelledby="product2ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="product2ModalLabel">Brazilian coffee</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <img src="../img/brazilian.jpg." class="card-img-top" alt="arabica">
+                                        <div class="modal-body">
+                                            <p class="modal-text">Strong Brazilian coffee that will help you wake up and survive the day.</p>
+                                            <p>It is sourced from a small village in Brazil close to the Amazon river. Features dark roast with chocolate notes and a hint of caramel sweetness in the aftertaste.</p>
+                                            <p>Price: <span class = "price">25.99</span> €/kg</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('brazilian', 25.99, 1)">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/colombian.jpg" class="card-img-top" alt="colombian">
+                        <div class="card-body">
+                            <h5 class="card-title">Colombian coffee</h5>
+                            <p class="card-text">Light roast of coffee, but don't let the colour fool you.</p>
+                            <p>Price: <span class = "price">32.99</span> €/kg</p>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#product3Modal">
+                                More info
+                            </button>
+                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('colombian', 32.99, 1)">Add to cart</button>
+
+                            <div class="modal fade" id="product3Modal" tabindex="-1" aria-labelledby="product3ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="product3ModalLabel">Brazilian coffee</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <img src="../img/colombian.jpg." class="card-img-top" alt="arabica">
+                                        <div class="modal-body">
+                                            <p class="modal-text">Light roast of coffee, but don't let the colour fool you - it packs a punch!</p>
+                                            <p>It is sourced from a village in Colombia from the Medellin region. Features light roast with fruity notes and a hint of caramel sweetness in the aftertaste.</p>
+                                            <p>Price: <span class = "price">32.99</span> €/kg</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('colombian', 32.99, 1)">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                        <img id = "product4" src="../img/covfefe.jpg" class="card-img-top" alt="covfefe">
+                        <div class="card-body">
+                            <h5 class="card-title">Covfefe</h5>
+                            <p class="card-text">When your brain is completely fried and needs something to survive.</p>
+                            <p>Price: <span class = "price">29.99</span> €/kg</p>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#product4Modal">
+                                More info
+                            </button>
+                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('covfefe', 29.99, 1)">Add to cart</button>
+
+                            <div class="modal fade" id="product4Modal" tabindex="-1" aria-labelledby="product4ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="product4ModalLabel">Covfefe</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <img src="../img/covfefe.jpg." class="card-img-top" alt="arabica">
+                                        <div class="modal-body">
+                                            <p class="modal-text">Sometimes your brain is in a complete mush after long hours of working and/or studying</p>
+                                            <p>Fear not - we have a solution for you. It is called "covfefe", named after the famous cryptic tweet by one former President of the United States. This coffee is characterized by its sour notes with a hint of bitterness in the aftertaste.</p>
+                                            <p>Price: <span class = "price">29.99</span> €/kg</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary add-to-cart" onclick = "addToCart('covfefe', 29.99, 1)">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id = "footer">
+            <div class = "bottom" id = "content">
+                <div class = "bottom-left">
+                    <h3>Sitemap</h3>
+                    <ul class = "sitemap">
+                        <li><a href = "about.html">About</a></li>
+                        <li><a href = "shop.html">Shop</a></li>
+                        <li><a href = "contacts.html">Contacts</a></li>
+                        <li><a href = "policy.html">Privacy policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class = "bottom-middle">
+                    <img src = "../img/logo_200.png" alt="logo">
+                    <div class = "bottom-socials">
+                        <a href = "https://facebook.com"><img src = "../img/facebook.png"></a>
+                        <a href = "https://instagram.com"><img src = "../img/instagram.png"></a>
+                        <a href = "https://youtube.com"><img src = "../img/youtube.png"></a>
+                    </div>
+                </div>
+
+                <div class = "bottom-right">
+                    <h3>Contacts</h3>
+                    <p>Address: Test street 13-37, Riga, Latvia</p>
+                    <p>Phone: +371 90901001</p>
+                    <p>E-mail: info@beanery.lv</p>
+                </div>
+            </div>
+            <div class = "copyright">© Beanery, 2022</div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
     </body>
 </html>
