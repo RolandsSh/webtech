@@ -60,7 +60,7 @@ function displayCart() {
       <div class="item-name">${cartItem.name}</div>
       <div class="item-quantity">${cartItem.quantity}</div>
       <div class="item-price">${cartItem.price} €</div>
-      <div class="item-subtotal">${cartItem.quantity*cartItem.price} €</div>
+      <div class="item-subtotal">${Number(cartItem.quantity*cartItem.price).toFixed(2)} €</div>
       <button type="button" class="btn btn-primary remove-from-cart" onclick = "removeFromCart('${cartItem.name}');">Remove</button>
     `;
     cartContainer.appendChild(itemRow);
